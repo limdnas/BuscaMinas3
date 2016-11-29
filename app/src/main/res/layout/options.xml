@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="@drawable/olas_mar">
+
+<RelativeLayout
+	android:id="@+id/RelativeLayout01"
+	android:layout_width="fill_parent"
+	android:layout_height="80dp">
+	<TextView
+		android:id="@+id/TextView01"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textStyle="bold"
+		android:textSize="24sp"
+		android:layout_centerVertical="true" android:textColor="#ffffff" android:text="@string/options">
+	</TextView>
+</RelativeLayout>
+
+<ScrollView android:id="@+id/ScrollView01" android:layout_width="match_parent" android:layout_height="wrap_content">
+	<RelativeLayout android:id="@+id/RelativeLayout02" android:layout_height="wrap_content" android:layout_width="match_parent">
+		<RelativeLayout android:id="@+id/RelativeLayout03" android:layout_height="wrap_content" android:layout_width="match_parent">
+			<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView02" android:layout_centerHorizontal="true" android:text="@string/playername" android:textSize="15sp" android:textStyle="bold" android:textColor="#ffffffff"></TextView>
+			<EditText android:layout_below="@+id/TextView02" android:layout_centerHorizontal="true" android:id="@+id/EditText01" android:layout_height="40dp" android:layout_width="200dp" android:text="Player" android:layout_marginTop="10dp"></EditText>
+			<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView03" android:layout_centerHorizontal="true" android:text="@string/cpulevel"   android:textSize="15sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_below="@+id/EditText01" android:layout_marginTop="10dp"></TextView>	
+			<Button android:id="@+id/Button01" android:layout_height="40dp" android:layout_width="40dp"  android:layout_below="@+id/TextView03" android:layout_toLeftOf="@+id/TextSwitcher01" android:layout_marginLeft="20dp" android:text="&lt;&lt;" android:layout_marginTop="10dp" android:textStyle="bold"></Button>
+			<TextSwitcher android:layout_below="@+id/TextView03" android:id="@+id/TextSwitcher01" android:layout_height="40dp" android:layout_width="200dp" android:layout_centerHorizontal="true" android:layout_marginTop="10dp"></TextSwitcher>
+			<Button android:layout_below="@+id/TextView03" android:layout_toRightOf="@+id/TextSwitcher01" android:id="@+id/Button02" android:layout_height="40dp" android:layout_width="40dp" android:text="&gt;&gt;" android:layout_marginTop="10dp" android:textStyle="bold"></Button>			
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/RelativeLayout04" android:layout_height="wrap_content" android:layout_below="@+id/RelativeLayout03" android:layout_width="match_parent" android:layout_marginTop="10dp">
+			<TextView android:id="@+id/TextView04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="@string/minespercentage" android:textSize="15sp" android:textStyle="bold" android:textColor="#ffffffff"></TextView>
+			<SeekBar android:layout_below="@+id/TextView04" android:layout_centerHorizontal="true" android:id="@+id/SeekBar01" android:layout_width="280dp" android:layout_height="wrap_content" android:layout_marginTop="10dp"></SeekBar>
+			<TextView android:layout_height="wrap_content" android:layout_below="@+id/SeekBar01" android:layout_centerHorizontal="true" android:text="@+id/TextView05" android:layout_width="wrap_content" android:id="@+id/TextView05"></TextView>
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/RelativeLayout05" android:layout_height="wrap_content" android:layout_below="@+id/RelativeLayout04" android:layout_width="match_parent" android:layout_marginTop="10dp">
+			<TextView android:id="@+id/TextView06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:textColor="#ffffffff" android:textSize="15sp" android:textStyle="bold" android:text="@string/boardsize"></TextView>
+			<Button android:id="@+id/Button03" android:layout_toLeftOf="@+id/TextSwitcher02" android:layout_below="@+id/TextView06" android:layout_height="40dp" android:layout_width="40dp" android:text="&lt;&lt;" android:textStyle="bold"></Button>
+			<TextSwitcher android:layout_height="40dp" android:layout_below="@+id/TextView06" android:layout_width="200dp" android:id="@+id/TextSwitcher02" android:layout_centerHorizontal="true"></TextSwitcher>	
+			<Button android:layout_toRightOf="@+id/TextSwitcher02" android:id="@+id/Button04" android:layout_below="@+id/TextView06" android:layout_height="40dp" android:layout_width="40dp" android:text="&gt;&gt;" android:textStyle="bold"></Button>
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/RelativeLayout06" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/RelativeLayout05" android:layout_marginTop="15dp">
+			<Button android:id="@+id/Button05" android:layout_centerHorizontal="true" android:text="@string/defaultoptions" android:layout_height="60dp" android:layout_width="220dp" android:textStyle="bold"></Button>
+		</RelativeLayout>	
+	</RelativeLayout>
+</ScrollView>
+
+
+
+
+
+</LinearLayout>

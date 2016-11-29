@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Minesweeper</string>
+    <string name="op1">Play!</string>
+    <string name="op4">Learn to play</string>
+    <string name="op2">Options</string>
+    <string name="op3">Exit</string>
+    <string name="report">Report a Bug or suggestion here!</string>
+    <string name="available">Also available in: Spanish</string>
+    <string name="salir">Sure you want to exit?</string>
+    <string name="si">Yes</string>
+    <string name="no">No</string>
+    <string name="titulo">BUGS/SUGGESTIONS: Minesweeper</string>
+    <string name="cuerpo">Submit a bug report or suggestion. Thanks in advance.</string>
+    <string name="notificar">Notify to Neblire</string>
+    <string name="jug1">Player vs Android</string>
+    <string name="jug2">2 Players -Local-</string>
+    <string name="jug3">2 Players -Bluetooth-\n(Comming soon)</string>
+    <string name="jug4">2 Players -Internet-</string>
+    <string name="jug5">Multiplayer Battle\n(Comming soon)</string>
+	<string name="titulo1">Choose the game mode</string>
+<string name="options">Options</string>
+<string name="cpulevel">CPU Level</string>
+
+<string-array name="cpulevellist">
+	<item>Amateur</item>
+	<item>Intermediate</item>
+	<item>Advanced</item><item>Expert</item>
+	
+
+</string-array>
+<string name="playername">Player Name</string>
+<string name="playertype">Player Type</string>
+
+<string name="minespercentage">Percentage of Mines</string>
+<string name="boardsize">Board Size</string>
+<string name="defaultoptions">Restore Default Options</string>
+</resources>
