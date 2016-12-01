@@ -38,13 +38,13 @@ public class StartActivity extends MyActivity {
 			}
 		});
         
-        ImageView neblire = (ImageView) findViewById(R.id.ImageView01);
+        /*ImageView neblire = (ImageView) findViewById(R.id.ImageView01);
         neblire.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				Intent intent = new Intent("android.intent.action.VIEW", Uri.parse("http://www.neblire.com"));
 				startActivity(intent);
 			}
-		});
+		});*/
         
     }
 }

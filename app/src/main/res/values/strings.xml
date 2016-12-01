@@ -15,8 +15,8 @@
     <string name="notificar">Notify to Neblire</string>
     <string name="jug1">Player vs Android</string>
     <string name="jug2">2 Players -Local-</string>
-    <string name="jug3">2 Players -Bluetooth-\n(Comming soon)</string>
-    <string name="jug4">2 Players -Internet-</string>
+    <string name="jug3">Solo\n(Comming soon)</string>
+    <string name="jug4">2 Players -Internet-\n(Comming soon)</string>
     <string name="jug5">Multiplayer Battle\n(Comming soon)</string>
 	<string name="titulo1">Choose the game mode</string>
 <string name="options">Options</string>

@@ -1,19 +1,15 @@
 package com.sandamil.buscaminas.game;
 
-import java.util.Random;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+
 import com.sandamil.buscaminas.Times;
 import com.sandamil.buscaminas.activities.GameActivity;
-import com.sandamil.buscaminas.game.Cell;
-import com.sandamil.buscaminas.game.CellState;
-import com.sandamil.buscaminas.game.Neighborhood;
-import com.sandamil.buscaminas.game.OpeningCells;
-import com.sandamil.buscaminas.game.Player;
+
+import java.util.Random;
+
 //import com.sandamil.buscaminas.game.Sound;
-import com.sandamil.buscaminas.game.CellEnum;
 //import com.sandamil.buscaminas.websocket.MyWebSocket;
 
 public class GameControl {
@@ -316,9 +312,14 @@ public class GameControl {
 			}
 		});
 	}
-	
+
+	public static String nuevalinea = System.getProperty("line.separator");
+
+
 	private void setScore(){
 		activity.score.setText(players[0].name + "  " + players[0].score + " - " + players[1].score + "  " + players[1].name + " " + "   (Win: " + victoryPoints + " points)");
+		activity.score.setText(players[0].name + "  " + players[0].score + " - " + players[1].score + "  " + players[1].name + " " + "   (Win: " + victoryPoints + " points)");
+
 	}
 	
 	public boolean isCellOpened(int cell){

@@ -4,94 +4,78 @@
     android:id="@+id/LinearLayout01"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" android:background="@drawable/olas_mar">
+    android:layout_height="fill_parent"
+	android:background="@android:color/holo_orange_dark"
+	android:gravity="center_horizontal">
 
-<RelativeLayout
-	android:id="@+id/RelativeLayout01"
-	android:layout_width="fill_parent"
-	android:layout_height="80dp">
 	<TextView
 		android:id="@+id/TextView01"
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_centerHorizontal="true"
-		android:text="@string/titulo1" android:textStyle="bold"
-		android:textSize="24sp"
-		android:layout_centerVertical="true" android:textColor="#ffffff">
+		android:text="@string/titulo1"
+		android:textStyle="bold"
+		android:textSize="30sp"
+		android:layout_centerVertical="true"
+		android:textColor="#ffffff"
+		android:gravity="center"
+		android:paddingTop="50dp"
+		android:paddingBottom="50dp">
 	</TextView>
-</RelativeLayout>
 
-<RelativeLayout
-	android:id="@+id/RelativeLayout02"
-	android:layout_height="wrap_content"
-	android:layout_width="fill_parent"
-	android:layout_marginTop="10dp">
 	<Button
 		android:id="@+id/Button01"
 		android:text="@string/jug1"
-		android:layout_width="200dp"
-		android:layout_centerHorizontal="true" android:textStyle="bold" android:layout_height="55dp">
+		android:textStyle="bold"
+		android:layout_height="55dp"
+		android:layout_alignParentTop="true"
+		android:layout_alignStart="@+id/Button02"
+		android:layout_marginTop="13dp"
+		android:layout_width="200dp">
 	</Button>
-</RelativeLayout>
 
-<RelativeLayout
-	android:id="@+id/RelativeLayout03"
-	android:layout_height="wrap_content"
-	android:layout_width="fill_parent"
-	android:layout_marginTop="10dp">
 	<Button
 		android:id="@+id/Button02"
 		android:text="@string/jug2"
 		android:layout_width="200dp"
-		android:layout_centerHorizontal="true" android:textStyle="bold" android:layout_height="55dp">
+		android:layout_centerHorizontal="true"
+		android:textStyle="bold"
+		android:layout_height="55dp">
 	</Button>
-</RelativeLayout>
 
-<RelativeLayout
-	android:id="@+id/RelativeLayout04"
-	android:layout_height="wrap_content"
-	android:layout_width="fill_parent"
-	android:layout_marginTop="10dp">
-	<Button
-		android:id="@+id/Button03"
-		android:text="@string/jug3"
-		android:layout_width="200dp"
-		android:layout_centerHorizontal="true" android:textStyle="bold" android:textColor="#696969" android:focusable="false" android:layout_height="55dp">
-	</Button>
-</RelativeLayout>
-
-<RelativeLayout
-	android:id="@+id/RelativeLayout05"
-	android:layout_height="wrap_content"
-	android:layout_width="fill_parent"
-	android:layout_marginTop="10dp">
 	<Button
 		android:id="@+id/Button04"
 		android:text="@string/jug4"
 		android:layout_width="200dp"
-		android:layout_centerHorizontal="true" android:textStyle="bold" android:textColor="#696969" android:focusable="false" android:layout_height="55dp">
+		android:layout_centerHorizontal="true"
+		android:textStyle="bold"
+		android:textColor="#696969"
+		android:focusable="false"
+		android:layout_height="55dp">
 	</Button>
-</RelativeLayout>
 
-
-<RelativeLayout
-	android:id="@+id/RelativeLayout06"
-	android:layout_height="wrap_content"
-	android:layout_width="fill_parent"
-	android:layout_marginTop="10dp">
 	<Button
 		android:id="@+id/Button05"
 		android:text="@string/jug5"
 		android:layout_width="200dp"
-		android:layout_centerHorizontal="true" android:textStyle="bold" android:textColor="#696969" android:focusable="false" android:layout_height="55dp">
+		android:layout_centerHorizontal="true"
+		android:textStyle="bold"
+		android:textColor="#696969"
+		android:focusable="false"
+		android:layout_height="55dp">
 	</Button>
-</RelativeLayout>
 
-
-
-
-
-
+	<Button
+		android:id="@+id/Button03"
+		android:text="@string/jug3"
+		android:layout_width="200dp"
+		android:textStyle="bold"
+		android:textColor="#696969"
+		android:focusable="false"
+		android:layout_height="55dp"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true">
+	</Button>
 
 
 </LinearLayout>

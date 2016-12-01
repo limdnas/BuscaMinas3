@@ -13,10 +13,10 @@
     <string name="titulo">BUGS/SUGERENCIAS: Buscaminas</string>
     <string name="cuerpo">Escriba aquí el bug detectado o la sugerencia que crea oportuna. Gracias de antemano.</string>
     <string name="notificar">Notificar a Neblire</string>
-    <string name="jug1">Jugador vs Androide</string>
+    <string name="jug1">Jugador vs Android</string>
     <string name="jug2">2 Jugadores -Local-</string>
-    <string name="jug3">2 Jugadores -Bluetooth-\n(Pronto disponible)</string>
-    <string name="jug4">2 Jugadores -Internet-</string>
+    <string name="jug3">Solo\n(Pronto disponible)</string>
+    <string name="jug4">2 Jugadores -Internet-\n(Pronto disponible)</string>
     <string name="jug5">Batalla Multijugador\n(Pronto disponible)</string>
 	<string name="titulo1">Elige el modo de partida</string>
 <string name="options">Opciones</string>

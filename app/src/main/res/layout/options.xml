@@ -4,7 +4,8 @@
     android:id="@+id/LinearLayout01"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" android:background="@drawable/olas_mar">
+    android:layout_height="fill_parent"
+	android:background="@android:color/holo_orange_dark">
 
 <RelativeLayout
 	android:id="@+id/RelativeLayout01"

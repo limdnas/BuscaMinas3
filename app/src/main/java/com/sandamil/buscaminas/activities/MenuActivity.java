@@ -1,22 +1,22 @@
 package com.sandamil.buscaminas.activities;
 
-import com.sandamil.buscaminas.ButtonsAppearance;
-import com.sandamil.buscaminas.R;
-import com.sandamil.buscaminas.Times;
-import com.sandamil.buscaminas.game.GameConfig;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
+
+
+import com.sandamil.buscaminas.R;
+import com.sandamil.buscaminas.Times;
+import com.sandamil.buscaminas.game.GameConfig;
 
 public class MenuActivity extends MyActivity {
 	
@@ -27,22 +27,24 @@ public class MenuActivity extends MyActivity {
         setContentView(R.layout.menu);
         loadGameOptions();
         final Button op1 = (Button) findViewById(R.id.Button01);
-        ButtonsAppearance.setDrawableTo(op1,1);
+
         final Button op4 = (Button) findViewById(R.id.Button04);
-        ButtonsAppearance.setDrawableTo(op4,4);
+
         final Button op2 = (Button) findViewById(R.id.Button02);
-        ButtonsAppearance.setDrawableTo(op2,1);
+
         final Button op3 = (Button) findViewById(R.id.Button03);
-        ButtonsAppearance.setDrawableTo(op3,1);
-        op1.setOnClickListener(new OnClickListener() {
+
+
+//       BOTON PLAY
+		op1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				reset();
-				ButtonsAppearance.setDrawableTo(op1, 3);
-				ButtonsAppearance.disminuirTamTexto(op1);				
+
+
 				Handler h = new Handler(new Handler.Callback() {
 		            public boolean handleMessage(Message msg) {
-		            	ButtonsAppearance.aumentarTamTexto(op1);
-		            	ButtonsAppearance.setDrawableTo(op1, 1);
+
+
 		            	Intent intent = new Intent(MenuActivity.this, PlayActivity.class);
 		            	Bundle bundle = new Bundle();
 		            	bundle.putParcelable(GameConfig.GAME_CONFIG_KEY,gameConfig); 
@@ -53,22 +55,24 @@ public class MenuActivity extends MyActivity {
 		        });
 		        h.sendEmptyMessageDelayed(0, Times.BUTTON_PRESSED);
 			}
-		});        
+		});
+//       BOTON LEARN TO PLAY
         op4.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				//
 			}
 		});
+//       BOTON CONFIG
         op2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				reset();
-				ButtonsAppearance.setDrawableTo(op2, 3);
-				ButtonsAppearance.disminuirTamTexto(op2);
+
+
 				
 				Handler h = new Handler(new Handler.Callback() {
 		            public boolean handleMessage(Message msg) {
-		            	ButtonsAppearance.aumentarTamTexto(op2);
-		            	ButtonsAppearance.setDrawableTo(op2, 1);
+
+
 		            	Intent intent = new Intent(MenuActivity.this, OptionsActivity.class);
 		            	Bundle bundle = new Bundle();
 		            	bundle.putParcelable(GameConfig.GAME_CONFIG_KEY,gameConfig); 
@@ -80,16 +84,18 @@ public class MenuActivity extends MyActivity {
 		        h.sendEmptyMessageDelayed(0, Times.BUTTON_PRESSED);
 			}
 		});
+
+//       BOTON EXIT
         op3.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				reset();
-				ButtonsAppearance.setDrawableTo(op3, 3);
-				ButtonsAppearance.disminuirTamTexto(op3);
+
+
 				
 				Handler h = new Handler(new Handler.Callback() {
 		            public boolean handleMessage(Message msg) {
-		            	ButtonsAppearance.aumentarTamTexto(op3);
-		            	ButtonsAppearance.setDrawableTo(op3, 1);
+
+
 		            	AlertDialog.Builder builder = new AlertDialog.Builder(MenuActivity.this);
 						builder.setMessage(R.string.salir)
 						       .setCancelable(false)
@@ -123,60 +129,49 @@ public class MenuActivity extends MyActivity {
         op1.setOnFocusChangeListener(new OnFocusChangeListener() {
 			public void onFocusChange(View v, boolean hasFocus) {
 				if (hasFocus) {
-					ButtonsAppearance.setDrawableTo(op1, 2);
 				} else {
-					ButtonsAppearance.setDrawableTo(op1, 1);
-				}					
+				}
 			}
 		});    
         op4.setOnFocusChangeListener(new OnFocusChangeListener() {
 			public void onFocusChange(View v, boolean hasFocus) {
 				/*if (hasFocus) {
-					ButtonsAppearance.setDrawableTo(op4, 2);
 				} else {
-					ButtonsAppearance.setDrawableTo(op4, 1);
-				}*/						
+				}*/
 			}
 		});
         op2.setOnFocusChangeListener(new OnFocusChangeListener() {
 			public void onFocusChange(View v, boolean hasFocus) {
 				if (hasFocus) {
-					ButtonsAppearance.setDrawableTo(op2, 2);
 				} else {
-					ButtonsAppearance.setDrawableTo(op2, 1);
-				}						
+				}
 			}
 		});    
         op3.setOnFocusChangeListener(new OnFocusChangeListener() {
 			public void onFocusChange(View v, boolean hasFocus) {
 				if (hasFocus) {
-					ButtonsAppearance.setDrawableTo(op3, 2);
 				} else {
-					ButtonsAppearance.setDrawableTo(op3, 1);
-				}					
+				}
 			}
 		});
     }
     
-    public void reset() {
+   public void reset() {
     	final Button op1 = (Button) findViewById(R.id.Button01);
-        ButtonsAppearance.setDrawableTo(op1,1);
-        /*final Button op4 = (Button) findViewById(R.id.Button04);
-        ButtonsAppearance.setDrawableTo(op4,1);*/
+ //       final Button op4 = (Button) findViewById(R.id.Button04);
         final Button op2 = (Button) findViewById(R.id.Button02);
-        ButtonsAppearance.setDrawableTo(op2,1);
         final Button op3 = (Button) findViewById(R.id.Button03);
-        ButtonsAppearance.setDrawableTo(op3,1);
     }
+
     
     public void sendEmail() {
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
-        String[] mailto = { "admin@neblire.com" };
+        String[] mailto = { "limdnas@gmail.com" };
         sendIntent.putExtra(Intent.EXTRA_EMAIL, mailto);
         sendIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.titulo));
         sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.cuerpo));
         sendIntent.setType("text/csv");
-        startActivity(Intent.createChooser(sendIntent, "Notificar a Neblire"));
+        startActivity(Intent.createChooser(sendIntent, "Notificar a limdnas Team"));
     }
     
     protected void onActivityResult(int requestCode, int resultCode, Intent data) { 

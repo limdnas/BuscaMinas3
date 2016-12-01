@@ -1,10 +1,5 @@
 package com.sandamil.buscaminas.activities;
 
-import com.sandamil.buscaminas.ButtonsAppearance;
-import com.sandamil.buscaminas.R;
-import com.sandamil.buscaminas.Times;
-import com.sandamil.buscaminas.game.GameConfig;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +17,10 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
+
+import com.sandamil.buscaminas.R;
+import com.sandamil.buscaminas.Times;
+import com.sandamil.buscaminas.game.GameConfig;
 
 public class OptionsActivity extends MyActivity implements ViewSwitcher.ViewFactory{
 	GameConfig gameConfig;
@@ -45,6 +44,7 @@ public class OptionsActivity extends MyActivity implements ViewSwitcher.ViewFact
         //SECCION NOMBRE DE USUARIO
         et1 = (EditText)findViewById(R.id.EditText01);
         et1.setText(gameConfig.player1Name); 
+
         //SECCION SELECCION DE NIVEL
         nameLevels = getResources().getStringArray(R.array.cpulevellist);
         txs1 = (TextSwitcher)findViewById(R.id.TextSwitcher01);
@@ -53,15 +53,10 @@ public class OptionsActivity extends MyActivity implements ViewSwitcher.ViewFact
         txs1.setOutAnimation(out);
         txs1.setText(nameLevels[gameConfig.cpuLevel - 1]);
 		final Button pre1 = (Button) findViewById(R.id.Button01);
-		ButtonsAppearance.setDrawableTo(pre1,1);
-		pre1.setOnClickListener(new OnClickListener() {	
+		pre1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				ButtonsAppearance.setDrawableTo(pre1,3);
-				ButtonsAppearance.disminuirTamTexto(pre1);	
 				Handler h = new Handler(new Handler.Callback() {
 		            public boolean handleMessage(Message msg) {
-		            	ButtonsAppearance.aumentarTamTexto(pre1);
-		            	ButtonsAppearance.setDrawableTo(pre1, 1);
 						if (gameConfig.cpuLevel > GameConfig.CPU_LEVEL1){
 							txs1.setText(nameLevels[--gameConfig.cpuLevel - 1]);
 							gameConfig.player1Level = gameConfig.cpuLevel;
@@ -74,15 +69,10 @@ public class OptionsActivity extends MyActivity implements ViewSwitcher.ViewFact
 			}
 		});
 		final Button nex1 = (Button) findViewById(R.id.Button02);
-		ButtonsAppearance.setDrawableTo(nex1,1);
-		nex1.setOnClickListener(new OnClickListener() {	
+		nex1.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				ButtonsAppearance.setDrawableTo(nex1,3);
-				ButtonsAppearance.disminuirTamTexto(nex1);	
 				Handler h = new Handler(new Handler.Callback() {
 		            public boolean handleMessage(Message msg) {
-		            	ButtonsAppearance.aumentarTamTexto(nex1);
-		            	ButtonsAppearance.setDrawableTo(nex1, 1);
 						if (gameConfig.cpuLevel < GameConfig.CPU_LEVEL4){
 							txs1.setText(nameLevels[++gameConfig.cpuLevel - 1]);
 							gameConfig.player1Level = gameConfig.cpuLevel;
@@ -118,15 +108,10 @@ public class OptionsActivity extends MyActivity implements ViewSwitcher.ViewFact
         txs2.setOutAnimation(out);
         txs2.setText(String.valueOf(gameConfig.rows) + " X " + String.valueOf(gameConfig.rows)); 
         final Button pre2 = (Button) findViewById(R.id.Button03);
-        ButtonsAppearance.setDrawableTo(pre2,1);
-		pre2.setOnClickListener(new OnClickListener() {	
+		pre2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				ButtonsAppearance.setDrawableTo(pre2,3);
-				ButtonsAppearance.disminuirTamTexto(pre2);	
 				Handler h = new Handler(new Handler.Callback() {
 		            public boolean handleMessage(Message msg) {
-		            	ButtonsAppearance.aumentarTamTexto(pre2);
-		            	ButtonsAppearance.setDrawableTo(pre2, 1);
 						if (gameConfig.rows > GameConfig.BOARD_MIN_SIZE){
 							gameConfig.rows--;
 							txs2.setText(String.valueOf(gameConfig.rows) + " X " + String.valueOf(gameConfig.rows));
@@ -138,15 +123,10 @@ public class OptionsActivity extends MyActivity implements ViewSwitcher.ViewFact
 			}
 		});
 		final Button nex2 = (Button) findViewById(R.id.Button04);
-		ButtonsAppearance.setDrawableTo(nex2,1);
-		nex2.setOnClickListener(new OnClickListener() {	
+		nex2.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				ButtonsAppearance.setDrawableTo(nex2,3);
-				ButtonsAppearance.disminuirTamTexto(nex2);	
 				Handler h = new Handler(new Handler.Callback() {
 		            public boolean handleMessage(Message msg) {
-		            	ButtonsAppearance.aumentarTamTexto(nex2);
-		            	ButtonsAppearance.setDrawableTo(nex2, 1);
 						if (gameConfig.rows < GameConfig.BOARD_MAX_SIZE){
 							gameConfig.rows++;
 							txs2.setText(String.valueOf(gameConfig.rows) + " X " + String.valueOf(gameConfig.rows));
@@ -159,15 +139,10 @@ public class OptionsActivity extends MyActivity implements ViewSwitcher.ViewFact
 		});
 		//SECCION RESTAURAR VALORES POR DEFECTO
 		final Button rDefault = (Button) findViewById(R.id.Button05);
-		ButtonsAppearance.setDrawableTo(rDefault,1);
-		rDefault.setOnClickListener(new OnClickListener() {	
+		rDefault.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				ButtonsAppearance.setDrawableTo(rDefault,3);
-				ButtonsAppearance.disminuirTamTexto(rDefault);	
 				Handler h = new Handler(new Handler.Callback() {
 		            public boolean handleMessage(Message msg) {
-		            	ButtonsAppearance.aumentarTamTexto(rDefault);
-		            	ButtonsAppearance.setDrawableTo(rDefault, 1);
 		            	RestoreDefaultOptions();
 		                return true;
 		            }

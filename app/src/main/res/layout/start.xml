@@ -1,73 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/LinearLayout01"
-    android:orientation="vertical"
+    android:id="@+id/Layout01"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/fondo">
+	android:background="@android:color/holo_orange_dark"
+	android:weightSum="1">
 
-<RelativeLayout
-	android:id="@+id/RelativeLayout01" 
-	android:layout_width="fill_parent" android:layout_height="80dp">
-	
-</RelativeLayout>
 
-<RelativeLayout
-	android:id="@+id/RelativeLayout02"
-	android:layout_height="wrap_content" android:layout_width="fill_parent">
-	<ImageView
-		android:id="@+id/ImageView01"
-		android:background="@drawable/logo" android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:layout_width="wrap_content">
-	</ImageView>
-</RelativeLayout>
-
-<RelativeLayout
-	android:id="@+id/RelativeLayout03" 
-	android:layout_width="fill_parent" android:layout_height="wrap_content">
-	<RelativeLayout
-		android:id="@+id/RelativeLayout04"
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:background="#0000cd" android:layout_marginTop="20dp">
-		<TextView
-			android:id="@+id/TextView01"
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:textStyle="bold"
-			android:textColor="#ffffff"
-			android:layout_centerHorizontal="true" android:textSize="25sp" android:text="G  A  M  E  S">
-		</TextView>
-	</RelativeLayout>
-</RelativeLayout>
-
-<RelativeLayout
-	android:id="@+id/RelativeLayout06"
-	android:layout_width="fill_parent" android:layout_height="150dp">
-	<ImageButton android:id="@+id/ImageButton01"
-		android:layout_centerHorizontal="true"
-		android:layout_centerVertical="true"
-		android:visibility="invisible" android:layout_height="100px" android:layout_width="100px" android:background="@drawable/play">
-	</ImageButton>
-</RelativeLayout>
-
-<RelativeLayout
-	android:layout_below="@+id/TextView02"
-	android:id="@+id/RelativeLayout05"
-	android:layout_width="fill_parent" android:layout_height="60dp">
-	<ImageView
-		android:layout_height="wrap_content"
-		android:id="@+id/ImageView02"
-		android:layout_width="wrap_content"
-		android:layout_centerHorizontal="true"
-		android:src="@drawable/idioma">
-	</ImageView>
 	<TextView
-		android:id="@+id/TextView02"
-		android:layout_centerHorizontal="true"
+		android:text="Juegos:"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:layout_below="@+id/ImageView02" android:text="@string/available">
-	</TextView>
-</RelativeLayout>
+		android:layout_height="wrap_content"
+		android:id="@+id/textView01"
+		android:textSize="50dp"
+		android:layout_marginTop="23dp"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true" />
 
-</LinearLayout>
+	<ImageButton android:id="@+id/ImageButton01"
+		android:layout_gravity="center_horizontal"
+		android:visibility="visible"
+		android:layout_height="60dp"
+		android:layout_width="220dp"
+		android:background="@drawable/buscaminas"
+		android:layout_below="@+id/textView01"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="25dp">
+	</ImageButton>
+
+
+</RelativeLayout>

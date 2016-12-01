@@ -1,8 +1,5 @@
 package com.sandamil.buscaminas.game;
 
-import com.sandamil.buscaminas.Fonts;
-import com.sandamil.buscaminas.R;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -17,12 +14,15 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Shader;
 
+import com.sandamil.buscaminas.Fonts;
+import com.sandamil.buscaminas.R;
+
 public enum CellEnum {
 	CLOSE() {
 		public void paintBitmap(Context context, Canvas c, Rect dest) {
-			int color1 = Color.argb(0xFF, 36, 168, 236);
+			int color1 = Color.argb(234, 79, 110, 85);
 			int color2 = Color.argb(0xFF, 160, 240, 230);
-			int border = Color.argb(0xFF, 117, 208, 255);
+			int border = Color.argb(100, 0, 0, 0);
 			Paint p = new Paint();
 			p.setAntiAlias(true);
 			float width = dest.width() / 20.0f;
@@ -30,10 +30,10 @@ public enum CellEnum {
 			RectF inside1 = new RectF(dest.left + width-1, dest.top + width-1, dest.right - width+1, dest.bottom - width+1);
 			RectF inside = new RectF(dest.left + width, dest.top + width, dest.right - width, dest.bottom - width);
 			LinearGradient linear = new LinearGradient(
-					inside1.left,
-					inside1.top + insideSize/3,
-					inside1.right,
-					inside1.top + 2*insideSize/3,
+					inside1.bottom,
+					inside1.bottom + insideSize/3,
+					inside1.bottom,
+					inside1.bottom + 2*insideSize/3,
 					color1, color2, Shader.TileMode.CLAMP);
 			p.setShader(linear);
 			c.drawRoundRect(inside1, width, width, p);
